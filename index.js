@@ -12,5 +12,21 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const arr = tutorials.map(function(title){
+    let newtitle = ""
+    for (let i =0; i < title.length; i++){
+      if (title[i-1] === " " || i === 0){
+        newtitle += title[i].toUpperCase()
+        // console.log(newtitle)
+      }
+      else {
+        newtitle += title[i] 
+      }
+      
+    }
+    return newtitle
+  })
+  return arr
 }
+
+console.log(titleCased())
